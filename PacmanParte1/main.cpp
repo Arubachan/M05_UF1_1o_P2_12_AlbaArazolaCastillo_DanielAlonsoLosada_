@@ -24,6 +24,7 @@ void Draw();
 
 enum USER_INPUTS { NONE, UP, DOWN, RIGHT, LEFT, QUIT };
 Map pacman_map = Map();
+std::vector<enemy>enemigos;
 char player_char = 'O';
 int player_x = 1;
 int player_y = 1;
@@ -46,8 +47,17 @@ int main()
 void Setup()
 {
     std::cout.sync_with_stdio(false);
+    srand(time(NULL));
     player_x = pacman_map.spawn_player.X;
     player_y = pacman_map.spawn_player.Y;
+
+    unsigned short enemyNumber = 0;
+    std::cout << "Cuantos enemigos quieres?";
+    std::cin >> enemyNumber;
+    for (size_t i = 0; i < enemyNumber; i++)
+    {
+        enemigos.push_back(Enemy(pacman_map.spawn_enemy));
+    }
 }
 
 void Input()
