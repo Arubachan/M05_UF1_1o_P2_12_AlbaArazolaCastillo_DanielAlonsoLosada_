@@ -1,4 +1,9 @@
 #include "Map.h"
+#include "Enemy.h"
+#include "TimeManager.h"
+
+#include <vector>
+
 
 /// <summary>
 /// Sets the needed variables
