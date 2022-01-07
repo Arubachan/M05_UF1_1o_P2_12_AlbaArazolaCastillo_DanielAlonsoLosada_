@@ -28,4 +28,4 @@ public:
 	void Draw();
 	void PowerUpPicked();
 	ENEMY_STATE Update(Map* _map, COORD _player);
-}; #pragma once
+};
