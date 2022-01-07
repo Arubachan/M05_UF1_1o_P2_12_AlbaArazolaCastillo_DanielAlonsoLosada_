@@ -24,7 +24,7 @@ void Draw();
 
 enum USER_INPUTS { NONE, UP, DOWN, RIGHT, LEFT, QUIT };
 Map pacman_map = Map();
-std::vector<enemy>enemigos;
+std::vector<Enemy>enemigos;
 char player_char = 'O';
 int player_x = 1;
 int player_y = 1;
